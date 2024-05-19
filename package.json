@@ -1,0 +1,23 @@
+{
+  "name": "ants-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ants-lint-cli-scan": "ants-lint-cli scan",
+    "ants-lint-cli-fix": "ants-lint-cli fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ants-lint-cli": "^1.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ants-lint-cli commit-file-scan",
+      "commit-msg": "ants-lint-cli commit-msg-scan"
+    }
+  }
+}
