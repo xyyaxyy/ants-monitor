@@ -1,0 +1,32 @@
+{
+  "name": "ants-monitor-wx-mini-program-performance",
+  "version": "0.0.2",
+  "description": "ants--前端稳定性监控 小程序性能监控",
+  "main": "dist/index.global.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.global.js",
+  "scripts": {
+    "build": "ants-bundle src/index.ts --format iife,cjs,esm --dts --minify --global-name antsMonitor",
+    "clean": "rimraf dist node_modules"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "ants",
+    "monitor",
+    "mini",
+    "performance"
+  ],
+  "author": "xyyaxyy",
+  "license": "ISC",
+  "devDependencies": {
+    "ants-bundle": "^1.0.0"
+  },
+  "dependencies": {
+    "ants-monitor-utils": "workspace:^",
+    "ants-monitor-shared": "workspace:^",
+    "ants-monitor-types": "workspace:^"
+  }
+}

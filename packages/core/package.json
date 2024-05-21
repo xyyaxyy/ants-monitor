@@ -1,0 +1,32 @@
+{
+  "name": "ants-monitor-core",
+  "version": "0.0.2",
+  "description": "ants--前端稳定性监控 核心功能",
+  "main": "dist/index.global.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.global.js",
+  "scripts": {
+    "build": "ants-bundle src/index.ts --format iife,cjs,esm --dts --minify --global-name antsMonitor",
+    "clean": "rimraf dist node_modules"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "ants",
+    "monitor",
+    "core"
+  ],
+  "author": "xyyaxyy",
+  "license": "ISC",
+  "devDependencies": {
+    "ants-bundle": "^1.0.0"
+  },
+  "dependencies": {
+    "ants-monitor-shared": "workspace:^",
+    "ants-monitor-types": "workspace:^",
+    "ants-monitor-utils": "workspace:^"
+  }
+}
